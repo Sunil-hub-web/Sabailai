@@ -1,0 +1,24 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_login_to_make_your_payment">Please login to make your payment</string>
+    <string name="transaction_details">Transaction Details</string>
+    <string name="login">Login</string>
+    <string name="prabhupay_id">PrabhuPAY Id</string>
+    <string name="email_or_mobile_number">Email/ Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="password_mpin">Password/ mPIN</string>
+    <string name="ecommerce_mpin">eCommerce mPin</string>
+    <string name="all_rights_reserved">2020 \u00A9 Prabhu Technology Pvt. Ltd. All rights reserved.</string>
+    <string name="cancel">Cancel</string>
+    <string name="button">Button</string>
+    <string name="go_back">Go Back</string>
+    <string name="confirm">Confirm</string>
+    <string name="please_enter_valid_4_digit_pin">Please enter valid 4 digits pin</string>
+    <string name="please_enter_ecommerce_mpin_to_continue">Please enter eCommerce mPin to continue</string>
+    <string name="please_enter_mobile_number_or_email">Please enter mobile number or email</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="sorry">Sorry</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+</resources>

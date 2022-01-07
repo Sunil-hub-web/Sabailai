@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/ten">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hundred">
+
+            <TextView
+                android:id="@+id/servicename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:fontFamily="@font/sans_bold"
+                android:text="Waste Pipe"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen" />
+
+            <RelativeLayout
+                android:id="@+id/pricelay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_below="@+id/servicename">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginBottom="@dimen/five"
+                    android:fontFamily="@font/roboto_thin"
+                    android:text="₹119.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/eighteen"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/hundred_twenty"
+                android:layout_height="@dimen/forty_five"
+                android:layout_below="@+id/pricelay"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:elevation="@dimen/five"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+
+                    <LinearLayout
+                        android:id="@+id/l_add_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_minus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_minus__count"
+                            android:fontFamily="@font/sans_bold"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/eighteen" />
+
+                        <TextView
+                            android:id="@+id/tv_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:fontFamily="@font/sans_bold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/textcol"
+                            android:textSize="@dimen/twelve" />
+
+                        <TextView
+                            android:id="@+id/tv_plus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_plus_count"
+                            android:fontFamily="@font/sans_bold"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/restrurant_white_box"
+                    android:padding="5dp"
+                    android:text="Out of Stock"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/deleteic"
+                android:layout_width="@dimen/forty"
+                android:layout_height="@dimen/forty"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/three"
+                android:src="@drawable/delete_icon" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/five"
+        android:background="#EFEFEF" />
+
+</LinearLayout>

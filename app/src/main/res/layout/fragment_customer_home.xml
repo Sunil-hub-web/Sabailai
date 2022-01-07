@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".customer.fragments.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hundred"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty">
+
+            <ImageView
+                android:id="@+id/locicon"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/ten"
+                android:src="@drawable/ic_location_white_icon" />
+
+            <TextView
+                android:id="@+id/selectedlocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/cart_layout"
+                android:layout_toRightOf="@+id/locicon"
+                android:background="@color/transparent"
+                android:fontFamily="@font/sans_regular"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen" />
+
+
+            <RelativeLayout
+                android:id="@+id/cart_layout"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/eight"
+                    android:src="@drawable/ic_cart_white" />
+
+                <TextView
+                    android:id="@+id/itemcounter"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:background="@drawable/cart_count_bg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/thirteen"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginRight="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/box"
+                android:drawableLeft="@drawable/ic_search"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:text="   Search for Services" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/service_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty_five"
+                android:background="#EFEFEF" />
+
+            <LinearLayout
+                android:id="@+id/offers_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/thirty"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center_vertical|bottom"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="Best Offers"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/seventeen" />
+
+                <View
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/two"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:background="@color/colorPrimary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/offers_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty_five"
+                android:background="#EFEFEF" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hundred_fifty">
+
+                <ImageView
+                    android:id="@+id/referimg"
+                    android:layout_width="@dimen/hundred"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/fifteen"
+                    android:src="@drawable/ic_technician" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_toRightOf="@+id/referimg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/referheading"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/forty"
+                        android:fontFamily="@font/sans_bold"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ten"
+                        android:text="Refer &amp; Earn"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/seventeen" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/referheading"
+                        android:fontFamily="@font/sans_regular"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                        android:textColor="@color/colorGrey1"
+                        android:textSize="@dimen/twelve" />
+
+
+                    <TextView
+                        android:id="@+id/sendotp"
+                        android:layout_width="@dimen/hundred"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/fifteen"
+                        android:background="@drawable/login_btn_bg"
+                        android:fontFamily="@font/sans_regular"
+                        android:gravity="center"
+                        android:text="REFER NOW"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/thirteen" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty_five"
+                android:background="#EFEFEF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:fontFamily="@font/sans_bold"
+                android:gravity="center_vertical|bottom"
+                android:paddingLeft="@dimen/ten"
+                android:text="Customer Testimonials"
+                android:textColor="@color/black"
+                android:textSize="@dimen/seventeen" />
+
+            <View
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/two"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sans_regular"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:text="What our customer saying about us."
+                android:textColor="@color/colorGrey1"
+                android:textSize="@dimen/twelve" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/testimonials_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

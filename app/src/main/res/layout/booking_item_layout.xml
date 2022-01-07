@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box"
+    android:layout_margin="@dimen/five"
+    android:padding="@dimen/eight">
+
+    <TextView
+        android:id="@+id/servicename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:gravity="center_vertical"
+        android:text="Plumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/fourteen" />
+
+    <TextView
+        android:id="@+id/serviceid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:text="Plumber"
+        android:textColor="@color/colorGrey1"
+        android:textSize="@dimen/fourteen" />
+    
+    <LinearLayout
+        android:id="@+id/midlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/servicename"
+        android:layout_marginTop="@dimen/fifteen"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/assindtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="Price"
+                android:textColor="@color/colorGrey1"
+                android:textSize="@dimen/twelve" />
+
+            <TextView
+                android:id="@+id/assignedto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/assindtitle"
+                android:text="Plumber"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fourteen" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/datetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="Scheduled"
+                android:textColor="@color/colorGrey1"
+                android:textSize="@dimen/twelve" />
+
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/datetitle"
+                android:text="Plumber"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fourteen" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workstartedlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/midlay"
+        android:layout_marginTop="@dimen/ten"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/statustitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="Status"
+                android:textColor="@color/colorGrey1"
+                android:textSize="@dimen/twelve" />
+
+            <TextView
+                android:id="@+id/workstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/statustitle"
+                android:text="Plumber"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fourteen" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/markascomplete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:background="@drawable/login_btn_bg"
+                android:fontFamily="@font/sans_bold"
+                android:text="Mark as Conplete"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

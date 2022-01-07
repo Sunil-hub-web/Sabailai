@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/five"
+        android:background="@drawable/box"
+        android:orientation="vertical"
+        android:padding="@dimen/eight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/personname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="Vikas Dubey"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fourteen"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="Rs.498.00"
+                android:textColor="@color/colorGreenDark"
+                android:textSize="@dimen/fourteen"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three">
+
+            <TextView
+                android:id="@+id/serviceid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="Service ID : SVM 98755 5555 222"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/twelve" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="12-07-20"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/twelve" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

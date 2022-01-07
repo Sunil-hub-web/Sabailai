@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/five"
+            android:layout_marginBottom="@dimen/five"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/notititle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text="Sanjay Deshmukh"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/serviceid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/three"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:text="Ceiling Fan Installation"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/twelve" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text="10:45 AM , 23-07-21"
+                    android:textColor="@color/boxlines"
+                    android:textSize="@dimen/twelve" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/contactinfolayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contactperson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/three"
+                    android:text="Contact Person : Kiran Patil"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/twelve" />
+
+                <TextView
+                    android:id="@+id/contactnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center_vertical"
+                    android:text="Contact No. : +91 9876543210"
+                    android:textColor="@color/textcol"
+                    android:textSize="@dimen/ten" />
+
+                <TextView
+                    android:id="@+id/plotapartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center_vertical"
+                    android:text="Flat no. 506, Floor no.5,"
+                    android:textColor="@color/textcol"
+                    android:textSize="@dimen/ten" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center_vertical"
+                    android:text="Hazel wing, Green woods appartments,"
+                    android:textColor="@color/textcol"
+                    android:textSize="@dimen/ten" />
+
+                <TextView
+                    android:id="@+id/citystate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center_vertical"
+                    android:text="Thane, Maharashtra - 420212"
+                    android:textColor="@color/textcol"
+                    android:textSize="@dimen/ten" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+
+</LinearLayout>

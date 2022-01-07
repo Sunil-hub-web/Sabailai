@@ -1,0 +1,3 @@
+rootProject.name='Sabailai'
+include ':app'
+include ':prabhupay-sdk'

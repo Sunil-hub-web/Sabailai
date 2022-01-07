@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".technician.activities.TechnicianOTP">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixty"
+            android:src="@drawable/login_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginTop="@dimen/thirty"
+            android:layout_marginRight="@dimen/thirty"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.chaos.view.PinView
+                android:id="@+id/pinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fifty"
+                android:cursorVisible="true"
+                android:fontFamily="@font/sans_regular"
+                android:inputType="number"
+                android:textColor="@color/colorAccent"
+                app:cursorColor="@color/colorAccent"
+                app:itemCount="4"
+                app:itemHeight="@dimen/fifty"
+                app:itemSpacing="@dimen/ten"
+                app:itemWidth="@dimen/fifty"
+                app:viewType="line" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/verifyotp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginRight="@dimen/thirty"
+            android:background="@drawable/login_btn_bg"
+            android:fontFamily="@font/sans_bold"
+            android:text="VERIFY OTP"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginRight="@dimen/thirty"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text="Login as"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/thirteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text=" Technician"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/thirteen" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text="Don't have an account!"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/thirteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text=" Register"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/thirteen" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

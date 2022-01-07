@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn_custom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/pp_primary"
+        android:text="@string/button"
+        android:textColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progress_custom"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/white"
+        android:translationZ="@dimen/general_padding_2"
+        android:visibility="gone" />
+
+</RelativeLayout>

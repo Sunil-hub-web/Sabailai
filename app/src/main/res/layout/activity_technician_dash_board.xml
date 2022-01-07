@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:orientation="vertical"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty">
+
+            <ImageView
+                android:id="@+id/locicon"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_location_white_icon"
+                android:padding="@dimen/ten"/>
+
+            <TextView
+                android:id="@+id/techniciallocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/notification_layout"
+                android:layout_toRightOf="@+id/locicon"
+                android:background="@color/transparent"
+                android:fontFamily="@font/sans_regular"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Saheed Nagar, Bhubaneswar, Odisha, India"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/notification_layout"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/eleven"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/notificationcounter"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:background="@drawable/cart_count_bg"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/thirteen"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/technician_bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view"
+        android:layout_below="@+id/header"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/technician_mobile_navigation"></fragment>
+
+</RelativeLayout>

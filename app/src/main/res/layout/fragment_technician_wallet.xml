@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".technician.fragments.TechnicianWalletFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/walletamount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/transparent"
+                android:fontFamily="@font/sans_bold"
+                android:layout_marginTop="@dimen/forty"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                android:singleLine="true"
+                android:textSize="@dimen/forty"
+                android:text="00.00"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/transparent"
+                android:fontFamily="@font/raleway"
+                android:layout_marginBottom="@dimen/forty"
+                android:maxLines="1"
+                android:textColor="@color/colorGrey1"
+                android:singleLine="true"
+                android:textSize="@dimen/fifteen"
+                android:text="Wallet Balance"/>
+
+            <LinearLayout
+                android:id="@+id/payment_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/payment_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

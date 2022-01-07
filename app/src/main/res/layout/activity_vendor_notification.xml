@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".technician.activities.VendorNotification">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:orientation="vertical"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty">
+
+            <ImageView
+                android:id="@+id/locicon"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/fourteen"
+                android:src="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:id="@+id/techniciallocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/notification_layout"
+                android:layout_toRightOf="@+id/locicon"
+                android:background="@color/transparent"
+                android:fontFamily="@font/sans_regular"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Notifications"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/notification_layout"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/eleven"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/notificationcounter"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:background="@drawable/cart_count_bg"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/thirteen"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vendornoti_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"/>
+
+</RelativeLayout>

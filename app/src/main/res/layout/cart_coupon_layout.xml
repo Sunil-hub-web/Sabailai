@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back_img"
+        android:layout_width="@dimen/fifty"
+        android:layout_height="@dimen/fifty"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/fifteen"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_back_arrow" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:fontFamily="@font/raleway"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/ten"
+        android:layout_toRightOf="@+id/back_img"
+        android:background="@color/colorPrimary"
+        android:text="Apply Coupon"
+        android:textColor="@color/black"
+        android:textSize="@dimen/seventeen"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten">
+
+                <EditText
+                    android:id="@+id/couponcode_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/five"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Promo Code"
+                    android:textColor="@color/textcol" />
+
+
+                <TextView
+                    android:id="@+id/applycoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/five"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/sans_regular"
+                    android:textSize="@dimen/thirteen"
+                    android:text="Apply"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/textcol"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:layout_toRightOf="@+id/back_img"
+                android:text="Available Coupon Codes"
+                android:textColor="@color/black"
+                android:textSize="@dimen/seventeen"
+                android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coupons"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/fifteen"
+        android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/success_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/response_image_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/responseTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/success_response_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="116dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:src="@drawable/success_logo"
+       />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/failed_response_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="116dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:src="@drawable/failed_logo"
+                app:layout_constraintBottom_toTopOf="@+id/responseTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/responseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:text="Success"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/response_image_layout"
+                app:layout_constraintStart_toStartOf="@+id/response_image_layout"
+                app:layout_constraintTop_toBottomOf="@+id/response_image_layout" />
+
+            <TextView
+                android:id="@+id/responseMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="XXXXXXXXXXXXXXXXXXXX"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/responseTitle"
+                app:layout_constraintStart_toStartOf="@+id/responseTitle"
+                app:layout_constraintTop_toBottomOf="@+id/responseTitle" />
+
+
+            <com.prabhutech.prabhupay_sdk.customview.PPButton
+                android:id="@+id/bt_go_back"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                app:type="0"
+                app:text="@string/go_back"
+                android:layout_marginStart="@dimen/general_padding_32"
+                android:layout_marginLeft="@dimen/general_padding_32"
+                android:layout_marginTop="@dimen/general_padding_48"
+                android:layout_marginEnd="@dimen/general_padding_32"
+                android:layout_marginRight="@dimen/general_padding_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/responseMessage"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+<!--<RelativeLayout -->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:layout_height="50dp">-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/spinner_text"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:maxLines="1"
+    android:paddingLeft="@dimen/twenty"
+    android:paddingRight="@dimen/twenty"
+    android:textSize="@dimen/fifteen"
+    android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+    android:drawableTint="@color/textcol"
+    android:textColor="@color/textcol"/>
+
+<!--</RelativeLayout>-->
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".customer.fragments.BookingsFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/locicon"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_booking_icon"
+            android:visibility="gone"
+            android:padding="@dimen/ten"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/locicon"
+            android:background="@color/transparent"
+            android:fontFamily="@font/sans_regular"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textSize="@dimen/seventeen"
+            android:text="Bookings"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/selectionlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/ten"
+        android:gravity="center"
+        android:layout_below="@+id/header">
+
+        <TextView
+            android:id="@+id/requested"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:gravity="center"
+            android:text="Requested"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selected"
+            android:fontFamily="@font/raleway"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fourteen"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"/>
+
+        <TextView
+            android:id="@+id/cancelled"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:gravity="center"
+            android:text="Cancelled"
+            android:layout_weight="1"
+            android:fontFamily="@font/raleway"
+            android:textColor="@color/textcol"
+            android:textSize="@dimen/fourteen"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"/>
+
+        <TextView
+            android:id="@+id/completed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:gravity="center"
+            android:text="Completed"
+            android:layout_weight="1"
+            android:fontFamily="@font/raleway"
+            android:textColor="@color/textcol"
+            android:textSize="@dimen/fourteen"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/booking_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectionlay"/>
+
+
+</RelativeLayout>

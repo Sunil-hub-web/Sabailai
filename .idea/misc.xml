@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/add_bg.xml" value="0.45901639344262296" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/box.xml" value="0.45901639344262296" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/box2.xml" value="0.45901639344262296" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/btn_plus_count.xml" value="0.45901639344262296" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/cart_count_bg.xml" value="0.17657657657657658" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/completed_bg.xml" value="0.45901639344262296" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/dottedline_view.xml" value="0.17657657657657658" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/fragment_bg.xml" value="0.17657657657657658" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/ic_back_arrow.xml" value="0.17657657657657658" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/ic_keyboard_arrow_right_black_24dp.xml" value="0.45901639344262296" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/drawable/rounded_cart.xml" value="0.17657657657657658" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_booking_form.xml" value="0.16044444444444445" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_cart.xml" value="0.2" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_customer_dash_board.xml" value="0.42271662763466045" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_customer_o_t_p.xml" value="0.22" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_login.xml" value="0.14" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_select_location_after_login.xml" value="0.42271662763466045" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_service_details.xml" value="0.4375" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_service_list.xml" value="0.16044444444444445" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_technician_dash_board.xml" value="0.14" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_technician_login.xml" value="0.15333333333333332" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_technician_otp.xml" value="0.15" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_user_sign_up.xml" value="0.2" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/activity_vendor_notification.xml" value="0.16216216216216217" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/booking_item_layout.xml" value="0.22" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/cart_coupon_layout.xml" value="0.16044444444444445" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/cart_item_layout.xml" value="0.16261261261261262" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/coupons_item_list.xml" value="0.16261261261261262" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/custom_service_layout.xml" value="0.18" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/customizable_layout.xml" value="0.16261261261261262" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/faq_layout_item.xml" value="0.4262295081967213" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_customer_bookings.xml" value="0.16216216216216217" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_customer_home.xml" value="0.2" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_customer_wallet.xml" value="0.45784543325526933" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_dashboard.xml" value="0.4375" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_home.xml" value="0.4375" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_notifications.xml" value="0.4375" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_profile.xml" value="0.16" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_technician_history.xml" value="0.14" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_technician_ongoing.xml" value="0.2" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_technician_profile.xml" value="0.14" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_technician_upcoming.xml" value="0.16" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/fragment_technician_wallet.xml" value="0.16" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/noti_layout.xml" value="0.1527027027027027" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/ongoing_item_layout.xml" value="0.16261261261261262" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/payment_item_layout.xml" value="0.4375" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/progress_dialog.xml" value="0.45784543325526933" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/selectdate_dialog.xml" value="0.16044444444444445" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/service_list_item_layout.xml" value="0.2" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/spinnerdropdownitem.xml" value="0.16261261261261262" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/spinnerfront2.xml" value="0.42271662763466045" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/spinneritem.xml" value="0.42271662763466045" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/subcat_layout_item.xml" value="0.4262295081967213" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/technician_ongoing_item_layout.xml" value="0.3911007025761124" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/upcoming_item_layout.xml" value="0.16261261261261262" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/layout/wallet_item_layout.xml" value="0.16261261261261262" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/menu/cuatomer_bottom_nav_menu.xml" value="0.42271662763466045" />
+        <entry key="..\:/Android project/Sabailai/app/src/main/res/menu/technician_bottom_nav_menu.xml" value="0.42271662763466045" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

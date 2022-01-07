@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "213124098556",
+    "project_id": "sabailaivendorandroid-17cdb",
+    "storage_bucket": "sabailaivendorandroid-17cdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213124098556:android:59f04b52796329641daa79",
+        "android_client_info": {
+          "package_name": "in.co.sabailai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213124098556-002vfvbq937qfp5ipafhka8f414o1dml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8NIVN-qRtlvnWlBlWdCBA4LbEJqxEokY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213124098556-002vfvbq937qfp5ipafhka8f414o1dml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

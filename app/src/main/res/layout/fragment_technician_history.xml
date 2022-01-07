@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".technician.fragments.TechnicianHistoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:fontFamily="@font/sans_bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/ten"
+            android:text="Task History"
+            android:textColor="@color/black"
+            android:textSize="@dimen/seventeen" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ongoing_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginBottom="@dimen/five"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    app:cardCornerRadius="@dimen/six">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box"
+                        android:orientation="vertical"
+                        android:padding="@dimen/eight">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:text="Sanjay Deshmukh"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/fifteen" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/box2"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/five"
+                                android:paddingTop="@dimen/three"
+                                android:paddingRight="@dimen/five"
+                                android:paddingBottom="@dimen/three"
+                                android:text="VIEW DETAILS"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/nine" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/three"
+                            android:text="Ceiling Fan Installation"
+                            android:textColor="@color/textcol"
+                            android:textSize="@dimen/twelve" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/three"
+                            android:text="Service ID : SVM 98755 5555 222"
+                            android:textColor="@color/textcol"
+                            android:textSize="@dimen/twelve" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/ten">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="10:45 AM , 23-07-21"
+                                android:textColor="@color/boxlines"
+                                android:textSize="@dimen/twelve" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/completed_bg"
+                                android:backgroundTint="@color/colorGreenDark"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/five"
+                                android:paddingTop="@dimen/five"
+                                android:paddingRight="@dimen/five"
+                                android:paddingBottom="@dimen/five"
+                                android:text="COMPLETED"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="@dimen/three"
+                                android:text="Contact Person : Kiran Patil"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/twelve" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Contact No. : +91 9876543210"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Flat no. 506, Floor no.5,"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Hazel wing, Green woods appartments,"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Thane, Maharashtra - 420212"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginBottom="@dimen/five"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    app:cardCornerRadius="@dimen/six">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box"
+                        android:orientation="vertical"
+                        android:padding="@dimen/eight">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:text="Sanjay Deshmukh"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/fifteen" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/box2"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/five"
+                                android:paddingTop="@dimen/three"
+                                android:paddingRight="@dimen/five"
+                                android:paddingBottom="@dimen/three"
+                                android:text="VIEW DETAILS"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/nine" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/three"
+                            android:text="Ceiling Fan Installation"
+                            android:textColor="@color/textcol"
+                            android:textSize="@dimen/twelve" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/three"
+                            android:text="Service ID : SVM 98755 5555 222"
+                            android:textColor="@color/textcol"
+                            android:textSize="@dimen/twelve" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/ten">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="10:45 AM , 23-07-21"
+                                android:textColor="@color/boxlines"
+                                android:textSize="@dimen/twelve" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/completed_bg"
+                                android:backgroundTint="@color/red"
+                                android:fontFamily="@font/sans_regular"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/five"
+                                android:paddingTop="@dimen/five"
+                                android:paddingRight="@dimen/five"
+                                android:paddingBottom="@dimen/five"
+                                android:text="REJECTED"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="@dimen/three"
+                                android:text="Contact Person : Kiran Patil"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/twelve" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Contact No. : +91 9876543210"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Flat no. 506, Floor no.5,"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Hazel wing, Green woods appartments,"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center_vertical"
+                                android:text="Thane, Maharashtra - 420212"
+                                android:textColor="@color/textcol"
+                                android:textSize="@dimen/ten" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

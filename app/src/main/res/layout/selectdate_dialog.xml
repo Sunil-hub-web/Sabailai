@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/one">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sixty"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sans_regular"
+            android:gravity="center"
+            android:text="Select Date for Service"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sixteen" />
+
+        <ImageView
+            android:id="@+id/closedalog"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close_icon"
+            android:padding="@dimen/ten"
+            app:tint="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sixty"
+            android:orientation="vertical"
+            android:background="@drawable/fragment_bg">
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fifteen"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/colorPrimary"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/datepickr"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_marginBottom="@dimen/five"
+                    android:background="@drawable/login_btn_bg"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:elevation="@dimen/five"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/eighteen" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

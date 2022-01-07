@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/geofence_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/address">
+
+    </fragment>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pin" />
+
+    <LinearLayout
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/latlong"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty_five"
+            android:layout_margin="@dimen/ten"
+            android:background="@drawable/box"
+            android:gravity="center_vertical"
+            android:hint="showlatlong"
+            android:inputType="text"
+            android:paddingLeft="@dimen/twenty"
+            android:paddingRight="@dimen/twenty"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fifteen" />
+
+        <TextView
+            android:id="@+id/text_yourlocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_margin="@dimen/ten"
+            android:paddingLeft="@dimen/twenty"
+            android:paddingRight="@dimen/twenty"
+            android:textColor="@color/black"
+            android:background="@drawable/box"
+            android:textSize="@dimen/fifteen"
+            android:gravity="center_horizontal"></TextView>
+
+        <Button
+            android:id="@+id/btn_Save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_margin="@dimen/ten"
+            android:background="@drawable/login_btn_bg"
+            android:fontFamily="@font/sans_bold"
+            android:text="Save Address"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

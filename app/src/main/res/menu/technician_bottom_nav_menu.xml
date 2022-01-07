@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_technician_ongoing"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_technician_ongoing" />
+
+    <item
+        android:id="@+id/navigation_technician_upcoming"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_technician_upcoming" />
+
+    <item
+        android:id="@+id/navigation_technician_wallet"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_technician_wallet" />
+
+    <item
+        android:id="@+id/navigation_technician_history"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_technician_history" />
+
+    <item
+        android:id="@+id/navigation_technician_profile"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_technician_profile" />
+
+</menu>

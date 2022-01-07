@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".technician.activities.TechnicianLogin">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_bg" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixty"
+            android:src="@drawable/login_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginTop="@dimen/thirty"
+            android:layout_marginRight="@dimen/thirty"
+            android:background="@drawable/box"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/ten"
+                android:src="@drawable/ic_mobile_icon" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/eight"
+                android:layout_marginBottom="@dimen/eight"
+                android:background="@color/boxlines" />
+
+            <EditText
+                android:id="@+id/vendormobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center_vertical"
+                android:hint="Enter Mobile No."
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:textSize="@dimen/fifteen" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sendotp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginRight="@dimen/thirty"
+            android:background="@drawable/login_btn_bg"
+            android:fontFamily="@font/sans_bold"
+            android:text="SEND OTP"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginRight="@dimen/thirty">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text="Login as"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/thirteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text=" Customer"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/thirteen" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

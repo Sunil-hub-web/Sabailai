@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".customer.activities.BookingForm">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/fifteen"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/cart_layout"
+            android:layout_toRightOf="@+id/backicon"
+            android:background="@color/transparent"
+            android:fontFamily="@font/sans_regular"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Booking"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/fifteen" />
+
+
+        <RelativeLayout
+            android:id="@+id/cart_layout"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/fifty"
+                android:layout_height="match_parent"
+                android:padding="@dimen/eight"
+                android:src="@drawable/ic_cart_white"
+                app:tint="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/itemcounter"
+                android:layout_width="@dimen/twenty"
+                android:layout_height="@dimen/twenty"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/cart_count_bg"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/ten">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:fontFamily="@font/sans_bold"
+                android:gravity="center_vertical|bottom"
+                android:paddingLeft="@dimen/ten"
+                android:text="Contact Information"
+                android:textColor="@color/black"
+                android:textSize="@dimen/seventeen" />
+
+            <View
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/two"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/referheading"
+                android:fontFamily="@font/sans_regular"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:text="This information will be used to contact you about the service."
+                android:textColor="@color/colorGrey1"
+                android:textSize="@dimen/fourteen" />
+
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="First Name"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="Last Name"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="Email *"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="Phone Number *"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/boxlines" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:fontFamily="@font/sans_bold"
+                android:gravity="center_vertical|bottom"
+                android:paddingLeft="@dimen/ten"
+                android:text="Service Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/seventeen" />
+
+            <View
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/two"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/referheading"
+                android:fontFamily="@font/sans_regular"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:text="Where would you like us to serve?"
+                android:textColor="@color/colorGrey1"
+                android:textSize="@dimen/fourteen" />
+            <EditText
+                android:id="@+id/contactpersonname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="Contact Person Name"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <EditText
+                android:id="@+id/contactnumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="Contact Number *"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <EditText
+                android:id="@+id/contactaddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="Address *"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <EditText
+                android:id="@+id/appsuit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:gravity="center_vertical"
+                android:hint="Apt/Suite#"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <EditText
+                android:id="@+id/citychoosen"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:text="Bhubaneswar"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <Spinner
+                android:id="@+id/areaspinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawableTint="@color/textcol"
+                android:gravity="center_vertical"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="@dimen/two"
+                android:paddingRight="@dimen/two"
+                android:text="Please Select Your Area"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <TextView
+                android:id="@+id/yourlocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:textColor="@color/black"
+                android:background="@drawable/box"
+                android:hint="Your Location"
+                android:textSize="@dimen/fifteen"
+                android:gravity="center_horizontal"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/boxlines" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:fontFamily="@font/sans_bold"
+                android:gravity="center_vertical|bottom"
+                android:paddingLeft="@dimen/ten"
+                android:text="When would you like us to come?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/seventeen" />
+
+            <View
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/two"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/selectdate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawableTint="@color/textcol"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:text="Select Date"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+            <Spinner
+                android:id="@+id/timeslot_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/box"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawableTint="@color/textcol"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/two"
+                android:paddingRight="@dimen/two"
+                android:text="Select Slot"
+                android:textColor="@color/textcol"
+                android:textSize="@dimen/fifteen" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginBottom="@dimen/twenty"
+                android:background="@color/boxlines" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:fontFamily="@font/sans_bold"
+                android:gravity="center_vertical|bottom"
+                android:paddingLeft="@dimen/ten"
+                android:text="Choose your payment method"
+                android:textColor="@color/black"
+                android:textSize="@dimen/seventeen" />
+
+            <View
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/two"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/colorPrimary" />
+
+            <RadioGroup
+                android:id="@+id/payment_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/ten">
+
+                <RadioButton
+                    android:id="@+id/online"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:drawableTint="@color/textcol"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/twenty"
+                    android:text="Online Payment"
+                    android:textColor="@color/textcol"
+                    android:textSize="@dimen/fifteen" />
+
+                <RadioButton
+                    android:id="@+id/cod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="@color/textcol"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/twenty"
+                    android:text="Pay on Service Time"
+                    android:textColor="@color/textcol"
+                    android:textSize="@dimen/fifteen" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/referheading"
+                android:layout_marginTop="@dimen/fifteen"
+                android:fontFamily="@font/sans_regular"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:text="By clicking on the Book Now button youare agreeing to our Terms of Services and Privacy Policy."
+                android:textColor="@color/colorGrey1"
+                android:textSize="@dimen/fourteen" />
+
+
+            <Button
+                android:id="@+id/bookingbtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/twenty"
+                android:background="@drawable/login_btn_bg"
+                android:fontFamily="@font/sans_bold"
+                android:text="Book Now"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

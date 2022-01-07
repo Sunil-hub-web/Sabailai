@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".customer.activities.ServiceDetails">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/fifteen"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/cat_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/cart_layout"
+            android:layout_toRightOf="@+id/backicon"
+            android:background="@color/transparent"
+            android:fontFamily="@font/sans_regular"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen" />
+
+
+        <RelativeLayout
+            android:id="@+id/cart_layout"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/fifty"
+                android:layout_height="match_parent"
+                android:padding="@dimen/eight"
+                android:src="@drawable/ic_cart_white" />
+
+            <TextView
+                android:id="@+id/itemcounter"
+                android:layout_width="@dimen/twenty"
+                android:layout_height="@dimen/twenty"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/cart_count_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/noservicesavailable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/no_service_image"
+        android:visibility="gone"
+        android:layout_below="@+id/header"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:visibility="gone"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/ten">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center_vertical|bottom"
+                    android:text="Need An Expert"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/seventeen" />
+
+                <View
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/two"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:background="@color/colorPrimary" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/subcatrecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center_vertical|bottom"
+                    android:text="About Plumbing"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/seventeen" />
+
+                <View
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/two"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/aboutcategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/referheading"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/colorGrey1"
+                    android:textSize="@dimen/twelve" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center_vertical|bottom"
+                    android:text="FAQ's"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/seventeen" />
+
+                <View
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/two"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:background="@color/colorPrimary" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/faqrecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty_five"
+                android:background="#EFEFEF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/ten">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:fontFamily="@font/sans_bold"
+                    android:gravity="center_vertical|bottom"
+                    android:text="What users are saying about us"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/seventeen" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten">
+
+                    <ImageView
+                        android:id="@+id/ratingimage"
+                        android:layout_width="@dimen/forty"
+                        android:layout_height="@dimen/forty"
+                        android:src="@drawable/ic_rating"
+                        app:tint="@color/ratingtint"
+                        android:padding="@dimen/ten"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/forty"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/ratingimage"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/ratings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/referheading"
+                            android:fontFamily="@font/sans_bold"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/twelve" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/referheading"
+                            android:fontFamily="@font/sans_regular"
+                            android:gravity="center_vertical"
+                            android:text="Average ratings of the service."
+                            android:textColor="@color/colorGrey1"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten">
+
+                    <ImageView
+                        android:id="@+id/reviewimage"
+                        android:layout_width="@dimen/forty"
+                        android:layout_height="@dimen/forty"
+                        android:src="@drawable/ic_comment"
+                        app:tint="@color/ratingtint"
+                        android:padding="@dimen/ten"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/forty"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/reviewimage"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/reviewcount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/referheading"
+                            android:fontFamily="@font/sans_bold"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/twelve" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/referheading"
+                            android:fontFamily="@font/sans_regular"
+                            android:gravity="center_vertical"
+                            android:text="Of the service my users."
+                            android:textColor="@color/colorGrey1"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

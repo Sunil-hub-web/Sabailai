@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/five"
+    android:background="@drawable/box"
+    android:orientation="vertical"
+    android:padding="@dimen/eight">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/assignedto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:text="Plumber"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fourteen" />
+
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/raleway"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="Plumber"
+            android:textColor="@color/red"
+            android:textSize="@dimen/fourteen" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/servicename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/three"
+        android:text="Plumber"
+        android:textColor="@color/textcol"
+        android:textSize="@dimen/thirteen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/three">
+
+        <TextView
+            android:id="@+id/serviceid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:gravity="center_vertical"
+            android:text="Plumber"
+            android:textColor="@color/textcol"
+            android:textSize="@dimen/thirteen" />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/raleway"
+            android:gravity="center_vertical"
+            android:text="Plumber"
+            android:textColor="@color/textcol"
+            android:textSize="@dimen/thirteen" />
+
+    </RelativeLayout>
+
+</LinearLayout>

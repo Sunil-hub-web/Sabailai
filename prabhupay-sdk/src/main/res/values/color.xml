@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pp_primary">#C31B22</color>
+    <color name="pp_primary_dark">#C31B22</color>
+    <color name="colorAccent">#C31B22</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="background">#F0F0F0</color>
+    <color name="colorDeam">#fff3f3</color>
+    <color name="gray">#A9A9A9</color>
+    <color name="darkSeparator">#898989</color>
+    <color name="grey">#AEAEAE</color>
+    <color name="line_view_color">#e5e5e5</color>
+    <color name="btn_grey">#6c757d</color>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".customer.activities.ServiceList">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/fifteen"
+            app:tint="@color/colorAccent"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/servicetitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/cart_layout"
+            android:layout_toRightOf="@+id/backicon"
+            android:background="@color/transparent"
+            android:fontFamily="@font/sans_regular"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Plumbing"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/fifteen" />
+
+
+        <RelativeLayout
+            android:id="@+id/cart_layout"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="@dimen/fifty"
+                android:layout_height="match_parent"
+                android:padding="@dimen/eight"
+                android:src="@drawable/ic_cart_white"
+                app:tint="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/itemcounter"
+                android:layout_width="@dimen/twenty"
+                android:layout_height="@dimen/twenty"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/cart_count_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/eighty"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/subcatrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/ten"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty_five"
+                android:background="#EFEFEF" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/servicelistrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty_five"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/fifteen"
+        android:layout_marginTop="@dimen/fifteen"
+        android:layout_marginEnd="@dimen/fifteen"
+        android:layout_marginBottom="@dimen/fifteen"
+        android:visibility="gone"
+        android:background="@drawable/cat_selected">
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="@dimen/thirty"
+            android:layout_height="@dimen/thirty"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/ten"
+            android:background="@drawable/cart_countbox"
+            android:fontFamily="@font/sans_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen" />
+
+        <TextView
+            android:id="@+id/crtprice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/thirty"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_toRightOf="@id/count"
+            android:fontFamily="@font/sans_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="₹00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen" />
+
+
+        <TextView
+            android:id="@+id/continuetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/thirty"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ten"
+            android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:fontFamily="@font/sans_regular"
+            android:gravity="center_vertical"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

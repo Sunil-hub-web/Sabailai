@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlay"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/eighty"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/ten"
+    android:paddingTop="@dimen/ten"
+    android:paddingRight="@dimen/ten">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imgl"
+        android:layout_width="@dimen/sixty"
+        android:layout_height="@dimen/sixty"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="@dimen/ten">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imag_service"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/offer_b" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/customservicename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:layout_toLeftOf="@+id/servicetaken"
+        android:layout_toRightOf="@+id/imgl"
+        android:fontFamily="@font/sans_bold"
+        android:text="Waste Pipe"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sixteen" />
+
+    <TextView
+        android:id="@+id/customserviceprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:layout_below="@+id/customservicename"
+        android:layout_toLeftOf="@+id/servicetaken"
+        android:layout_toRightOf="@+id/imgl"
+        android:fontFamily="@font/sans_regular"
+        android:text="Waste Pipe"
+        android:textColor="@color/textcol"
+        android:textSize="@dimen/fourteen" />
+
+    <CheckBox
+        android:id="@+id/servicetaken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGrey" />
+
+</RelativeLayout>

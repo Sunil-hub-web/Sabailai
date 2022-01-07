@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_technician_ongoing">
+
+    <fragment
+        android:id="@+id/navigation_technician_ongoing"
+        android:name="in.co.sabailai.technician.fragments.TechnicianOngoingFragment"
+        android:label="@string/title_technician_ongoing"
+        tools:layout="@layout/fragment_technician_ongoing" />
+
+    <fragment
+        android:id="@+id/navigation_technician_upcoming"
+        android:name="in.co.sabailai.technician.fragments.TechnicianUpcomingFragment"
+        android:label="@string/title_technician_upcoming"
+        tools:layout="@layout/fragment_technician_upcoming" />
+
+    <fragment
+        android:id="@+id/navigation_technician_wallet"
+        android:name="in.co.sabailai.technician.fragments.TechnicianWalletFragment"
+        android:label="@string/title_technician_wallet"
+        tools:layout="@layout/fragment_technician_wallet" />
+
+    <fragment
+        android:id="@+id/navigation_technician_history"
+        android:name="in.co.sabailai.technician.fragments.TechnicianHistoryFragment"
+        android:label="@string/title_technician_history"
+        tools:layout="@layout/fragment_technician_history" />
+
+    <fragment
+        android:id="@+id/navigation_technician_profile"
+        android:name="in.co.sabailai.technician.fragments.TechnicianProfileFragment"
+        android:label="@string/title_technician_profile"
+        tools:layout="@layout/fragment_technician_profile" />
+</navigation>
