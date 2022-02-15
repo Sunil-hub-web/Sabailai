@@ -23,11 +23,18 @@
             android:textColor="@color/black"
             android:textSize="@dimen/seventeen" />
 
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swiprefresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ongoing_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ongoing_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"

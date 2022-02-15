@@ -64,7 +64,9 @@ public class SplashScreen extends AppCompatActivity implements ActivityCompat.On
                         Intent i = new Intent(getApplicationContext(), SelectLocationAfterLogin.class);
                         startActivity(i);
                         finish();
+
                     }else {
+
                         Intent i = new Intent(getApplicationContext(), CustomerDashBoard.class);
                         i.putExtra("intenti", "");
                         startActivity(i);

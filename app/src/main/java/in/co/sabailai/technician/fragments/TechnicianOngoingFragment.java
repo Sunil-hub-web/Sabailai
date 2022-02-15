@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -47,10 +48,13 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import in.co.sabailai.R;
 import in.co.sabailai.extras.ServerLinks;
 import in.co.sabailai.extras.SessionManager;
 import in.co.sabailai.extras.ViewDialog;
+import in.co.sabailai.technician.activities.ShowLocationOnMap;
 import in.co.sabailai.technician.activities.TechnicianDashBoard;
 import in.co.sabailai.technician.models.OngoingGetSet;
 
@@ -65,6 +69,10 @@ public class TechnicianOngoingFragment extends Fragment {
     String latitude,longitude;
     Double d_latitude,d_longitude;
 
+    SwipeRefreshLayout swiprefresh;
+
+    OngoingAdapter catAdapter;
+
     public void mapFragment() {
         // Required empty public constructor
     }
@@ -77,7 +85,19 @@ public class TechnicianOngoingFragment extends Fragment {
         session = new SessionManager(getActivity());
 
         ongoing_recyclerview = v.findViewById(R.id.ongoing_recyclerview);
+        swiprefresh = v.findViewById(R.id.swiprefresh);
 
+        swiprefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                GetOngoings();
+                catAdapter.notifyDataSetChanged();
+
+                swiprefresh.setRefreshing(false);
+
+            }
+        });
 
         return v;
 //        TechnicianDashBoard.notificationcounter.setText();
@@ -90,6 +110,8 @@ public class TechnicianOngoingFragment extends Fragment {
     }
 
     private void GetOngoings() {
+
+        ongoungarray.clear();
 
         progressbar.showDialog();
 
@@ -136,7 +158,7 @@ public class TechnicianOngoingFragment extends Fragment {
 
                                 }
 
-                                OngoingAdapter catAdapter = new OngoingAdapter(ongoungarray, getActivity());
+                                catAdapter = new OngoingAdapter(ongoungarray, getActivity());
                                 ongoing_recyclerview.setHasFixedSize(true);
                                 ongoing_recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
                                 ongoing_recyclerview.setAdapter(catAdapter);
@@ -323,7 +345,18 @@ public class TechnicianOngoingFragment extends Fragment {
                     d_latitude = Double.valueOf(latitude);
                     d_longitude = Double.valueOf(longitude);
 
-                    showmap(d_latitude,d_longitude);
+                    if(latitude.equals("null")){
+
+                        Toast.makeText(mContext, "Address Not Found", Toast.LENGTH_SHORT).show();
+                    }else {
+
+                       // showmap(d_latitude,d_longitude);
+
+                        Intent intent = new Intent(getContext(), ShowLocationOnMap.class);
+                        intent.putExtra("latitude",latitude);
+                        intent.putExtra("longitude",longitude);
+                        startActivity(intent);
+                    }
                 }
             });
 
@@ -509,14 +542,14 @@ public class TechnicianOngoingFragment extends Fragment {
         super.onDestroyView();
     }
 
-    public void showmap(double latitude,double longitude){
+   /* public void showmap(double latitude,double longitude){
 
 
         Dialog dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.viewaddressdetails);
         //dialog.setCancelable(false);
 
-        //Button btn_dismiss = dialog.findViewById(R.id.btn_dismiss);
+        Button btn_dismiss = dialog.findViewById(R.id.btn_dismiss);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.geofence_map);
 
@@ -547,13 +580,13 @@ public class TechnicianOngoingFragment extends Fragment {
             }
         });
 
-        /*btn_dismiss.setOnClickListener(new View.OnClickListener() {
+        btn_dismiss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 dialog.dismiss();
             }
-        });*/
+        });
 
         dialog.show();
         Window window = dialog.getWindow();
@@ -561,6 +594,6 @@ public class TechnicianOngoingFragment extends Fragment {
         //window.setBackgroundDrawableResource(R.drawable.dialogback);
 
 
-    }
+    }*/
 
 }

@@ -10,7 +10,7 @@
     <color name="black">#000000</color>
     <color name="bg_color">#EDEDED</color>
 
-    <color name="textcol">#FF4A4A4A</color>
+        <color name="textcol">#FF4A4A4A</color>
     <color name="ratingtint">#E9AB46</color>
 
     <color name="colorGrey">#CECECE</color>

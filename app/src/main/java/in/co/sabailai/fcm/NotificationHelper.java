@@ -1,5 +1,6 @@
 package in.co.sabailai.fcm;
 
+import android.app.Dialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -9,6 +10,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.Window;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import org.json.JSONObject;
 
@@ -37,53 +41,60 @@ public class NotificationHelper {
     /**
      * Create and push the notification
      */
-    public void createNotification(String title, String message, String user, String activity)
+    public void createNotification(String title, String message, String user, String activity,String amount)
     {
 
-        session = new SessionManager(mContext);
+        try {
+            session = new SessionManager(mContext);
 
-        if(session.isLogin()) {
+            Log.d("hrseg",amount);
 
-            /**Creates an explicit intent for an Activity in your app**/
-            if (session.getUserType().equalsIgnoreCase("technician")) {
-                resultIntent = new Intent(mContext, TechnicianDashBoard.class);
-                resultIntent.putExtra("intenti", activity);
-                resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            } else {
-                resultIntent = new Intent(mContext, CustomerDashBoard.class);
-                resultIntent.putExtra("intenti", activity);
-                resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            if (session.isLogin()) {
+
+                /**Creates an explicit intent for an Activity in your app**/
+                if (session.getUserType().equalsIgnoreCase("technician")) {
+                    resultIntent = new Intent(mContext, TechnicianDashBoard.class);
+                    resultIntent.putExtra("intenti", activity);
+                    resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                } else {
+                    resultIntent = new Intent(mContext, CustomerDashBoard.class);
+                    resultIntent.putExtra("intenti", activity);
+                    resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                }
+
+                PendingIntent resultPendingIntent = PendingIntent.getActivity(mContext,
+                        0 /* Request code */, resultIntent,
+                        PendingIntent.FLAG_UPDATE_CURRENT);
+
+                mBuilder = new NotificationCompat.Builder(mContext, NOTIFICATION_CHANNEL_ID);
+                mBuilder.setSmallIcon(R.drawable.ic_stat_name);
+                mBuilder.setContentTitle(title)
+                        .setAutoCancel(true)
+                        .setDefaults(Notification.DEFAULT_ALL)
+                        .setContentText(message + "," +"\n" + "Total Amount"+" : "+ amount)
+                        .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
+                        .setContentIntent(resultPendingIntent);
+
+                mNotificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+
+                    int importance = NotificationManager.IMPORTANCE_HIGH;
+                    NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "NOTIFICATION_CHANNEL_NAME", importance);
+                    notificationChannel.enableLights(true);
+                    notificationChannel.setLightColor(Color.BLUE);
+                    notificationChannel.enableVibration(true);
+                    notificationChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+                    assert mNotificationManager != null;
+                    mBuilder.setChannelId(NOTIFICATION_CHANNEL_ID);
+                    mNotificationManager.createNotificationChannel(notificationChannel);
+
+                    assert mNotificationManager != null;
+                    mNotificationManager.notify(965824521 /* Request Code */, mBuilder.build());
+
+                }
             }
-
-            PendingIntent resultPendingIntent = PendingIntent.getActivity(mContext,
-                    0 /* Request code */, resultIntent,
-                    PendingIntent.FLAG_UPDATE_CURRENT);
-
-            mBuilder = new NotificationCompat.Builder(mContext, NOTIFICATION_CHANNEL_ID);
-            mBuilder.setSmallIcon(R.drawable.ic_stat_name);
-            mBuilder.setContentTitle(title)
-                    .setAutoCancel(true)
-                    .setDefaults(Notification.DEFAULT_ALL)
-                    .setContentText(message)
-                    .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
-                    .setContentIntent(resultPendingIntent);
-
-            mNotificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-
-                int importance = NotificationManager.IMPORTANCE_HIGH;
-                NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "NOTIFICATION_CHANNEL_NAME", importance);
-                notificationChannel.enableLights(true);
-                notificationChannel.setLightColor(Color.BLUE);
-                notificationChannel.enableVibration(true);
-                notificationChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
-                assert mNotificationManager != null;
-                mBuilder.setChannelId(NOTIFICATION_CHANNEL_ID);
-                mNotificationManager.createNotificationChannel(notificationChannel);
-            }
-            assert mNotificationManager != null;
-            mNotificationManager.notify(965824521 /* Request Code */, mBuilder.build());
-
+        }catch (Exception e){
+            Log.d("nddq", ""+e);
         }
 
     }

@@ -39,6 +39,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import in.co.sabailai.R;
 import in.co.sabailai.extras.ServerLinks;
 import in.co.sabailai.extras.SessionManager;
@@ -52,21 +54,39 @@ public class TechnicianUpcomingFragment extends Fragment {
     RecyclerView upcoming_recyclerview;
     ArrayList<UpcomingGetSet> upcomingarray = new ArrayList<UpcomingGetSet>();
 
+    SwipeRefreshLayout swiprefresh;
+    UpcomingAdapter catAdapter;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_technician_upcoming, container, false);
 
         upcoming_recyclerview = v.findViewById(R.id.upcoming_recyclerview);
+        swiprefresh = v.findViewById(R.id.swiprefresh);
 
         progressbar = new ViewDialog(getActivity());
         session = new SessionManager(getActivity());
 
-
         GetUpcomings();
+
+        swiprefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                GetUpcomings();
+                catAdapter.notifyDataSetChanged();
+
+                swiprefresh.setRefreshing(false);
+
+            }
+        });
+
         return v;
     }
 
     private void GetUpcomings() {
+
+        upcomingarray.clear();
 
         progressbar.showDialog();
 
@@ -106,7 +126,7 @@ public class TechnicianUpcomingFragment extends Fragment {
                                             "contact_no", "apart_noplot_no", "address", "area", "city", "State", status));
 
                                 }
-                                UpcomingAdapter catAdapter = new UpcomingAdapter(upcomingarray, getActivity());
+                                catAdapter = new UpcomingAdapter(upcomingarray, getActivity());
                                 upcoming_recyclerview.setHasFixedSize(true);
                                 upcoming_recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
                                 upcoming_recyclerview.setAdapter(catAdapter);

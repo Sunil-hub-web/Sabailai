@@ -3,6 +3,7 @@ package in.co.sabailai.technician.fragments;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.location.LocationManager;
@@ -49,11 +50,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import in.co.sabailai.R;
 import in.co.sabailai.customer.activities.BookingForm;
 import in.co.sabailai.extras.ServerLinks;
 import in.co.sabailai.extras.SessionManager;
 import in.co.sabailai.extras.ViewDialog;
+import in.co.sabailai.technician.activities.ShowLocationOnMap;
 import in.co.sabailai.technician.models.OngoingGetSet;
 
 
@@ -63,9 +67,12 @@ public class TechnicianHistoryFragment extends Fragment {
     SessionManager session;
     RecyclerView ongoing_recyclerview;
     ArrayList<OngoingGetSet> ongoungarray = new ArrayList<OngoingGetSet>();
+    SwipeRefreshLayout swiprefresh;
 
     String latitude,longitude;
     Double d_latitude,d_longitude;
+
+    OngoingAdapter catAdapter;
 
 
     public TechnicianHistoryFragment() {
@@ -82,12 +89,27 @@ public class TechnicianHistoryFragment extends Fragment {
         session = new SessionManager(getActivity());
 
         ongoing_recyclerview = v.findViewById(R.id.ongoing_recyclerview);
+        swiprefresh = v.findViewById(R.id.swiprefresh);
+
+        swiprefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                GetHistory();
+                catAdapter.notifyDataSetChanged();
+
+                swiprefresh.setRefreshing(false);
+
+            }
+        });
 
         GetHistory();
         return v;
     }
 
     private void GetHistory() {
+
+        ongoungarray.clear();
 
         progressbar.showDialog();
 
@@ -130,7 +152,7 @@ public class TechnicianHistoryFragment extends Fragment {
 
                                 }
 
-                                OngoingAdapter catAdapter = new OngoingAdapter(ongoungarray, getActivity());
+                                catAdapter = new OngoingAdapter(ongoungarray, getActivity());
                                 ongoing_recyclerview.setHasFixedSize(true);
                                 ongoing_recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
                                 ongoing_recyclerview.setAdapter(catAdapter);
@@ -259,12 +281,6 @@ public class TechnicianHistoryFragment extends Fragment {
             holder.citystate.setText(category.getArea()+","+category.getCity()+","+category.getState());
             holder.latlong.setText(category.getLongitute()+","+category.getLatitute());
 
-            latitude = category.getLatitute();
-            longitude = category.getLongitute();
-
-            d_latitude = Double.valueOf(latitude);
-            d_longitude = Double.valueOf(longitude);
-
 
             //holder.viewdetails.setVisibility(View.GONE);
 
@@ -286,53 +302,26 @@ public class TechnicianHistoryFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
 
-                    Dialog dialog = new Dialog(getContext());
-                    dialog.setContentView(R.layout.viewaddressdetails);
-                    dialog.setCancelable(false);
+                    latitude = category.getLatitute();
+                    longitude = category.getLongitute();
 
-                    //Button btn_dismiss = dialog.findViewById(R.id.btn_dismiss);
+                    d_latitude = Double.valueOf(latitude);
+                    d_longitude = Double.valueOf(longitude);
 
-                    SupportMapFragment mapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager()
-                            .findFragmentById(R.id.geofence_map);
+                    if(latitude.equals("null")){
 
-                    mapFragment.getMapAsync(new OnMapReadyCallback() {
-                        @Override
-                        public void onMapReady(GoogleMap mMap) {
-                            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                        Toast.makeText(mContext, "Address Not Found", Toast.LENGTH_SHORT).show();
 
-                            mMap.clear(); //clear old markers
+                    }else {
 
-                            CameraPosition googlePlex = CameraPosition.builder()
-                                    .target(new LatLng(d_latitude,-d_longitude))
-                                    .zoom(10)
-                                    .bearing(0)
-                                    .tilt(45)
-                                    .build();
+                        //showmap(d_latitude,d_longitude);
 
-                            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null);
+                        Intent intent = new Intent(getContext(), ShowLocationOnMap.class);
+                        intent.putExtra("latitude",latitude);
+                        intent.putExtra("longitude",longitude);
+                        startActivity(intent);
+                    }
 
-                           /* mMap.addMarker(new MarkerOptions()
-                                    .position(new LatLng(37.4219999, -122.0862462))
-                                    .title("Spider Man"));
-
-                            mMap.addMarker(new MarkerOptions()
-                                    .position(new LatLng(37.4629101,-122.2449094))
-                                    .title("Iron Man")
-                                    .snippet("His Talent : Plenty of money"));
-
-                            mMap.addMarker(new MarkerOptions()
-                                    .position(new LatLng(37.3092293,-122.1136845))
-                                    .title("Captain America"));*/
-                        }
-                    });
-
-                    /*btn_dismiss.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-
-                            dialog.dismiss();
-                        }
-                    });*/
 
                 }
             });
@@ -355,28 +344,56 @@ public class TechnicianHistoryFragment extends Fragment {
         }
     }
 
-    public void showGppglemap(){
+   /* public void showmap(double latitude,double longitude){
 
         Dialog dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.viewaddressdetails);
         dialog.setCancelable(false);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
-                .findFragmentById(R.id.geofence_map);
+        Button btn_dismiss = dialog.findViewById(R.id.btn_dismiss);
 
-        Button btn_Save = dialog.findViewById(R.id.btn_Save);
+        SupportMapFragment mapFragment1 = (SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.geofence_map);
 
-        btn_Save.setOnClickListener(new View.OnClickListener() {
+        mapFragment1.getMapAsync(new OnMapReadyCallback() {
+            @Override
+            public void onMapReady(GoogleMap mMap) {
+
+                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+                mMap.clear(); //clear old markers
+
+                CameraPosition googlePlex = CameraPosition.builder()
+                        .target(new LatLng(longitude,latitude))
+                        .zoom(17)
+                        .bearing(0)
+                        .tilt(45)
+                        .build();
+
+                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null);
+
+                mMap.addMarker(new MarkerOptions()
+                        .position(new LatLng(longitude,latitude ))
+                        .title("Spider Man").snippet("His Talent : Plenty of money"));
+
+                mMap.setBuildingsEnabled(true);
+                mMap.getUiSettings().setCompassEnabled(true);
+
+            }
+        });
+
+        btn_dismiss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
+                dialog.dismiss();
             }
         });
 
         dialog.show();
         Window window = dialog.getWindow();
-        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         //window.setBackgroundDrawableResource(R.drawable.dialogback);
-    }
+
+
+    }*/
 }
